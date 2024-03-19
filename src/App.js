@@ -19,11 +19,17 @@ const content = [
     "Next.js (Fullstack framework)",
     "React Native (build native mobile apps with React)",
   ],
+  [
+    "Vanilla JavaScript requires imperative programming",
+    "Imperative Programming: You define all the steps needed to achieve a result",
+    "React on the other hand embraces declarative programming",
+    "With React, you define the goal and React figures out how to get there",
+  ],
 ];
 
 export default function App() {
-  const [activeContentIndex, setActiveContentIndex] = useState(0);
-
+  const [activeContentIndex, setActiveContentIndex] = useState(0); // react hook, useState hook
+//this is array destructing syntax in JS, it declares two variables. These variables are assigned the values returned by useState(0)
   return (
     <div>
       <header>
@@ -53,6 +59,12 @@ export default function App() {
             onClick={() => setActiveContentIndex(2)}
           >
             Related Resources
+          </button>
+          <button
+            className={activeContentIndex === 3 ? "active" : ""}
+            onClick={() => setActiveContentIndex(3)}
+            >
+              React vs Js
           </button>
         </menu>
         <div id="tab-content">
